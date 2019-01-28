@@ -39,7 +39,7 @@ class OrderController extends Controller
 			$orders = $orders->whereBetween('creation_date', [$startDate, $endDate]);
 		}
 		if(count($orders) == 0){
-	        $response['message'] = 'No results';
+	        $response['message'] = "No orders.";
             return response()->json($response, 404);
         }
 		$response['status']  = 'success';
