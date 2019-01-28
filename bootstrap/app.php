@@ -60,6 +60,9 @@ $app->singleton(
 */
 
 $app->middleware([
+   App\Http\Middleware\Api\CorsMiddleware::class
+]);
+$app->middleware([
    App\Http\Middleware\Api\JsonRequestMiddleware::class
 ]);
 
